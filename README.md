@@ -1,13 +1,14 @@
-## Chạy được hay không thì không biết nhé cả nhà :))
+# Chạy được hay không thì không biết nhé cả nhà
 
-## No idea if it actually runs or not, though! :))
+# No idea if it actually runs or not, though!
 
-(## Chi phi nguyên vật liệu mỗi chỗ mỗi khác nên mình không biết đâu. Mình mua hết tất cả mọi thứ, cả đồ mình có là 975.000đ nha.)</br>
-(## Nếu các bạn làm theo cái này của mình thì chúc các bạn thành công nha.)
+### Chi phi nguyên vật liệu mỗi chỗ mỗi khác nên mình không biết đâu. Mình mua hết tất cả mọi thứ, cả đồ mình có là 975.000đ nha.</br>
+
+### Nếu các bạn làm theo cái này của mình thì chúc các bạn thành công nha.
 
 # Thư viện cần cài
 
-```
+```bash
 AccelStepper
 MFRC522
 Adafruit MCP23X17
@@ -17,22 +18,18 @@ Servo
 
 # Danh sách vật liệu:
 
-- Vi điều khiển: 1 × Arduino Uno R3
+- Vi điều khiển:
+  - 1 × Arduino Uno R3
 - Điều khiển chuyển động:
-
-* 1 × Động cơ bước 28BYJ-48 5V
-* 1 × Mạch điều khiển ULN2003
-
+  - 1 × Động cơ bước 28BYJ-48 5V
+  - 1 × Mạch điều khiển ULN2003
 - Cửa thang máy:
-
-* 1 × Servo SG90 hoặc MG90S ((MG90S khỏe hơn SG90 nếu cửa hơi nặng))
-
+  - 1 × Servo SG90 hoặc MG90S (MG90S khỏe hơn SG90 nếu cửa hơi nặng)
 - Cảm biến:
+  - 4 × Cảm biến hồng ngoại LM393
+- Bố trí:
 
-* 4 × Cảm biến hồng ngoại LM393
-  ++ Bố trí:
-
-```
+```bash
 Tầng 4  -> A3
 Tầng 3  -> A2
 Tầng 2  -> A1
@@ -40,17 +37,12 @@ Tầng 1  -> A0
 ```
 
 - Hiển thị:
-
-* 1 × LCD 16x2 I2C
-
+  - 1 × LCD 16x2 I2C
 - RFID:
-
-* 1 × RC522 RFID
-* 1–2 × Thẻ RFID hoặc móc khóa RFID
-
+  - 1 × RC522 RFID
+  - 1–2 × Thẻ RFID hoặc móc khóa RFID
 - Nút bấm:
-
-* 4 × Nút nhấn chọn tầng hoặc 4 × Nút nhấn có LED chọn tầng
+  - 4 × Nút nhấn chọn tầng hoặc 4 × Nút nhấn có LED chọn tầng
 
 ```
 Tầng 1
@@ -60,17 +52,12 @@ Tầng 4
 ```
 
 - Đèn báo tầng:
-
-* 4 × LED 5mm (Màu tùy ý) kèm 4 × Điện trở 220Ω.
-
+  - 4 × LED 5mm (Màu tùy ý) kèm 4 × Điện trở 220Ω.
 - Mở rộng chân:
-
-* 1 × MCP23017 (Cái này tùy ý bạn chọn nha).
-
+  - 1 × MCP23017 (Cái này tùy ý bạn chọn nha).
 - Nguồn (Rất quan trọng): Không nên cấp nguồn động cơ từ cổng USB Arduino.
-
-* 1 × Nguồn 5V 2A hoặc 5V 3A
-  ++ Nguồn này cấp cho:
+  - 1 × Nguồn 5V 2A hoặc 5V 3A
+- Nguồn này cấp cho:
 
 ```
 ULN2003
@@ -83,63 +70,53 @@ và nối chung với GND.
 # Phần cơ khí:
 
 - Khung:
-
-* Tấm Alu
-* Nhôm hộp mini hoặc V nhôm
-* Ke góc
-
+  - Tấm Alu
+  - Nhôm hộp mini hoặc V nhôm
+  - Ke góc
 - Cabin:
-
-* Formex 3mm hoặc mica
-
+  - Formex 3mm hoặc mica
 - Hệ truyền động:
-
-* Cách dễ nhất: (Mình làm cái này nha)
-  ++ Dây cước câu cá
-  ++ Puly nhựa
-* Cách đẹp hơn
-  ++ Dây curoa GT2
-  ++ Puly GT2
-
+  - Cách dễ nhất: (Mình làm cái này nha)
+    - Dây cước câu cá
+    - Puly nhựa
+  - Cách đẹp hơn:
+    - Dây curoa GT2
+    - Puly GT2
 - Ray dẫn hướng:
 
-* Để cabin không lắc:
-  ++ Thanh nhôm U nhỏ
-  hoặc
-  ++ Thanh trượt mini
+### Để cabin không lắc:
 
+- Thanh nhôm U nhỏ
+- Thanh trượt mini
 - Điện:
-
-* Breadboard
-* Dây dupont
-* Domino điện (nếu cần)
-
+  - Breadboard
+  - Dây dupont
+  - Domino điện (nếu cần)
 - Công cụ:
-
-* Keo nến
-* Keo 502
-* Khoan mini
-* Mỏ hàn
-* Thiếc hàn
+  - Keo nến
+  - Keo 502
+  - Khoan mini
+  - Mỏ hàn
+  - Thiếc hàn
 
 # Mô hình hiện tại:
 
 ```
 Quét RFID
-↓
+    ↓
 Chọn tầng
-↓
-Đóng cửa
-↓
+    ↓
+ Đóng cửa
+    ↓
 Di chuyển
-↓
+    ↓
 LED báo tầng
-↓
+    ↓
 LCD cập nhật tầng
-↓
-Mở cửa
-↓
-Đóng cửa
+    ↓
+ Mở cửa
+    ↓
+ Đóng cửa
 ```
 
 # Cấu trúc thư mục
@@ -242,18 +219,18 @@ enum ElevatorState {
 
 # RFID
 
-## Luồng:
+### Luồng:
 
 ```
 Khởi động
-↓
+    ↓
 Quét thẻ
-↓
+    ↓
 Thẻ hợp lệ ?
 ├─ Không
 │ LCD: Access Denied
 │
 └─ Có
-↓
+    ↓
 Cho phép bấm tầng
 ```
